@@ -1,21 +1,22 @@
 {% set name = "fissix" %}
-{% set version = "18.6a6" %}
+{% set version = "20.5.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 510144f5c59b01afea5352a02717882f20d3129cc2a3c7617a1c0a1e96e154c9
+  sha256: 5ed6ca30ff516753eea3a6d337b1788327666c05ececedcff27a760dde5da576
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
 
 requirements:
   host:
+    - flit
     - pip
     - python >=3.6
   run:
@@ -30,7 +31,7 @@ test:
 
 about:
   home: https://github.com/jreese/fissix
-  license: Python Software Foundation
+  license: PSF-2.0
   license_family: PSF
   license_file: LICENSE
   summary: Backport of lib2to3, with enhancements
