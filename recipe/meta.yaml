@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://github.com/jreese/fissix
-  license: Python Software Foundation
+  license: PSF-2.0
   license_family: PSF
   license_file: LICENSE
   summary: Backport of lib2to3, with enhancements
