@@ -3,9 +3,9 @@ About fissix
 
 Home: https://github.com/jreese/fissix
 
-Package license: Python Software Foundation
+Package license: PSF-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Backport of lib2to3, with enhancements
 
