@@ -1,5 +1,5 @@
 {% set name = "fissix" %}
-{% set version = "20.8.0" %}
+{% set version = "21.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d6e80a64ac9baff328b8b1b180002eb8b488bf2db0c3c555ef51750ee005571a
+  sha256: 756c47696a8d769ebf770ec7f018fd7b5948cd2cd6a204b5392bc9214ff795bc
 
 build:
   noarch: python
@@ -16,12 +16,13 @@ build:
 
 requirements:
   host:
+    - appdirs
     - flit
     - pip
     - python >=3.6
   run:
     - appdirs
-    - python
+    - python >=3.6
 
 test:
   imports:
