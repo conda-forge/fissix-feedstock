@@ -16,12 +16,13 @@ build:
 
 requirements:
   host:
+    - appdirs
     - flit
     - pip
     - python >=3.6
   run:
     - appdirs
-    - python
+    - python >=3.6
 
 test:
   imports:
