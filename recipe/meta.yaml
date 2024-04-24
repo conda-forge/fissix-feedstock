@@ -1,5 +1,5 @@
 {% set name = "fissix" %}
-{% set version = "21.11.13" %}
+{% set version = "24.4.24" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 496a51b86afb4c64cf15cfed38a0f3a371f300b298c962c881e33620f076a514
+  sha256: 7e8f1e448d1ebc1c8be68be8bf71123650710076ea9dcecb7801804b04f43547
 
 build:
   noarch: python
