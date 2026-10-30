@@ -16,12 +16,11 @@ build:
 
 requirements:
   host:
-    - appdirs
     - flit
     - pip
     - python {{ python_min }}
   run:
-    - appdirs
+    - platformdirs >= 4.4.0
     - python >={{ python_min }}
 
 test:
