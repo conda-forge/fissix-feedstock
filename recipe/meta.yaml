@@ -1,27 +1,26 @@
 {% set name = "fissix" %}
-{% set version = "24.4.24" %}
+{% set version = "26.10.29" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e8f1e448d1ebc1c8be68be8bf71123650710076ea9dcecb7801804b04f43547
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 7e333ab27e7b6bc6aa8c9af8ca2d2695021a1b7b6063463f728370384d617faf
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
 
 requirements:
   host:
-    - appdirs
     - flit
     - pip
     - python {{ python_min }}
   run:
-    - appdirs
+    - platformdirs >=4.4.0
     - python >={{ python_min }}
 
 test:
