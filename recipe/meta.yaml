@@ -20,7 +20,7 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - platformdirs >= 4.4.0
+    - platformdirs >=4.4.0
     - python >={{ python_min }}
 
 test:
